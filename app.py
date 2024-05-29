@@ -15,7 +15,7 @@ st.title("Sentiment Analysis of Movie Reviews")
 st.image("movie_reviews.jpg", caption="Analyzing movie reviews", use_column_width=True)
 
 # Sección de entrada de la reseña
-review = st.text_area("Enter your movie review:")
+review = st.text_area("Enter your movie review:(english only)")
 
 if st.button("Predict"):
     review_vec = vectorizer.transform([review])
