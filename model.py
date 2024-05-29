@@ -13,7 +13,7 @@ nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('movie_reviews')
 
-# Cargar datos
+
 reviews = [(list(movie_reviews.words(fileid)), category)
            for category in movie_reviews.categories()
            for fileid in movie_reviews.fileids(category)]
