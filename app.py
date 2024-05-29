@@ -27,6 +27,4 @@ if st.button("Predict", key="predict_button"):
         st.success("👍 Positive review")
     elif prediction == "negative":
         st.error("👎 Negative review")
-    else:
-        st.warning("🤔 Neutral review")
 
