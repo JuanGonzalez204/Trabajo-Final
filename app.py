@@ -24,7 +24,8 @@ if st.button("Predict", key="predict_button"):
     prediction = model.predict(review_vec)[0]
     st.subheader("Prediction Result:")
     if prediction == "positive":
-        st.success("👍 Positive review")
+        st.write("👍 Positive review")
     elif prediction == "negative":
-        st.error("👎 Negative review")
+        st.write("👎 Negative review")
+
 
