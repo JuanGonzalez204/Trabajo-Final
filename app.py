@@ -17,17 +17,10 @@ st.image("movie_reviews.jpg", caption="Analyzing movie reviews", use_column_widt
 # Sección de entrada de la reseña
 review = st.text_area("Enter your movie review:")
 
-# Botón de predicción estilizado
-if st.button("Predict", key="predict_button"):
-    # Predicción y resultado estilizado
+if st.button("Predict"):
     review_vec = vectorizer.transform([review])
     prediction = model.predict(review_vec)[0]
-    st.write("DEBUG: Prediction is", prediction)  # Mensaje de depuración para verificar la predicción
-    st.subheader("Prediction Result:")
-    if prediction == "positive":
-        st.write("👍 Positive review")
-    elif prediction == "negative":
-        st.write("👎 Negative review")
+    st.write(f'The review is: {prediction}')
 
 
 
